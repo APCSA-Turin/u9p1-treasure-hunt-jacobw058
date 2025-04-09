@@ -58,19 +58,19 @@ public class Grid {
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
                 if (grid[i][j] instanceof Dot) {
-                    System.out.print("[ ]");
+                    System.out.print("🟪");
                 } else
                 if (grid[i][j] instanceof Player) {
-                    System.out.print("[P]");
+                    System.out.print("🙂");
                 } else
                 if (grid[i][j] instanceof Trophy) {
-                    System.out.print("[W]");
+                    System.out.print("🏆");
                 } else 
                 if (grid[i][j] instanceof Treasure) {
-                    System.out.print("[T]");
+                    System.out.print("🍕");
                 } else
                 if (grid[i][j] instanceof Enemy) {
-                    System.out.print("[E]");
+                    System.out.print("😡");
                 }
             }
             System.out.println();
