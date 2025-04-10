@@ -3,8 +3,8 @@ package com.example.project;
 //Enemy only need constructor and getCoords() getRowCol()
 public class Enemy extends Sprite { //child  of Sprite
     
-    public Enemy(int x, int y) {
-        super(x, y);
+    public Enemy(int x, int y) { //constructor for Enemy
+        super(x, y); //calls constructor in parent class Sprite
     }
 
 
@@ -12,12 +12,12 @@ public class Enemy extends Sprite { //child  of Sprite
 
 
     @Override
-    public String getCoords(){ //returns the coordinates of the sprite ->"(x,y)"
-        return "Enemy:(" + getX() + "," + getY() + ")";
+    public String getCoords(){ //returns "Enemy:"+(x,y)
+        return "Enemy:" + super.getCoords();
     }
 
     @Override
-    public String getRowCol(int size){ //return "Enemy:"+row col
-        return "Enemy:" + arrToString(Grid.converter(getX(), getY(), size));
+    public String getRowCol(int size){ //return "Enemy:"+[row][col]
+        return "Enemy:" + super.getRowCol(size);
     }
 }
